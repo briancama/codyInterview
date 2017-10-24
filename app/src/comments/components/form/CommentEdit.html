@@ -1,0 +1,30 @@
+<md-dialog aria-label="Comment Box">
+  <form ng-cloak>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>Add Comment</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="$ctrl.hide($event)">
+          <md-icon md-svg-icon="close" aria-label="Close dialog"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+
+    <md-dialog-content>
+      <div class="md-dialog-content">
+        <md-input-container class="md-block">
+          <textarea type="text" ng-model="$ctrl.comment.content" md-maxlength="450" rows="5" md-select-on-focus required></textarea>
+        </md-input-container>
+      </div>
+    </md-dialog-content>
+
+    <md-dialog-actions layout="row">
+      <md-button ng-click="hide()">
+        Cancel
+      </md-button>
+      <md-button ng-click="answer('useful')">
+        Add
+      </md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>
